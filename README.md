@@ -2,7 +2,7 @@
 
 ### Applied ML / AI Engineer · Founder, [Elysium Fields AI](https://elysiumfields.ai)
 
-Self-taught ML engineer with 25+ years of creative-technical work behind me. After a career mixing location sound on film and television, I taught myself machine learning and now build and ship deep-learning systems **end-to-end, solo** — models that meet or beat published academic benchmarks.
+Self-taught ML engineer with 25+ years of creative-technical work behind me. After a career mixing location sound on film and television, I taught myself machine learning and now build and ship deep-learning systems **end-to-end, solo** — with the evaluation discipline to say precisely what each number does and doesn't prove.
 
 📍 Cranbrook, BC, Canada · Open to remote · 📫 **trent@elysiumfields.ai**
 
@@ -10,18 +10,21 @@ Self-taught ML engineer with 25+ years of creative-technical work behind me. Aft
 
 ### 🔭 What I build
 
-A multi-domain environmental-prediction platform: independently trained, per-domain expert models (hydrology, avalanche, drought, wildfire) on a shared **3.3 TB** geospatial data lake, feature store, and reproducible training/evaluation pipeline. I work the whole stack — from scraping government APIs and engineering terabyte-scale data, to training and evaluating models with research-grade rigor, to shipping production apps.
+A multi-domain environmental-prediction platform: independently trained, per-domain expert models (hydrology, flood, avalanche, drought, wildfire) on a shared **3.3 TB** geospatial data lake, feature store, and reproducible training/evaluation pipeline. I work the whole stack — from scraping government APIs and engineering terabyte-scale data, to training and evaluating models with research-grade rigor, to shipping production apps.
+
+The product thesis is **calibrated operational prediction**, not leaderboard rank: an operator always has yesterday's sensor reading, and a forecast is only useful if its uncertainty is honest.
 
 ### 📊 Selected results — public benchmarks
 
 | Task | Result | Published baseline |
 |---|---|---|
-| Streamflow — CAMELS-US ungauged (531 basins, spatial k-fold) | **median NSE 0.8302** | Li 2025: 0.79 · Kratzert 2019: 0.69 |
-| Streamflow — 626 basins across 4 continents (Caravan) | **median NSE ~0.83** | — |
-| Avalanche danger — 49 zones (live, in production) | **74% operational accuracy** | on par with Swiss RF (~73%) |
-| Real-estate price model — 13.9M+ records | **R² 0.868 · MAPE 9.48%** | — |
+| **Flood** — pure simulation, 67 gauge-exact GRDC pairs (±20% drainage area, ≤10 km), 2014–2021 | **median NSE 0.61**, ahead on **85%** of gauges | GloFAS operational reanalysis: 0.35 · on par with a published ML benchmark's ungauged random k-fold (0.59) |
+| **Streamflow — operational nowcast** (data assimilation), 626 held-out basins, 4 continents | **median NSE 0.83** (log space) / **0.68** (linear); **+0.40 linear over 1-day persistence**; intervals near nominal (50/80/90% → 50.2/77.6/86.0% coverage) | a different task from ungauged simulation — not comparable to the row below |
+| **Streamflow — pure simulation, ungauged**, CAMELS-US 531 basins, spatial k-fold | median NSE **0.67** (linear) | Li 2025: 0.79 · Kratzert 2019: 0.69 — **the published baselines still lead here** |
+| **Avalanche danger** — 49 zones (live, in production) | **73.2% operational accuracy** (prior-day bulletin as an input); **~52–54%** from weather data alone | approaching the published Swiss SLF operational range (74–78%) |
+| **Real-estate price model** — 13.9M+ records | **R² 0.868 · MAPE 9.48%** | — |
 
-*Pure-simulation streamflow (no observed-discharge input); protocols matched to each baseline; every number reproduces bit-for-bit from model checkpoints. I report the benchmarks I don't beat, too.*
+*Each row states its task exactly, because the tasks aren't interchangeable: nowcasting **with** observed-discharge assimilation is a fundamentally easier problem than ungauged pure simulation, and NSE computed in log space runs higher than in linear space — so linear is reported wherever a published baseline uses it. Every streamflow, flood, and avalanche number above re-derives bit-identically from its model checkpoints under a fixed verification script. I report the benchmarks I don't beat, too — the ungauged streamflow row is one of them.*
 
 ### 🚀 Live products
 - **AvalancheWatch** — live avalanche-danger prediction → [avalanche-watch.elysiumfields.ai](https://avalanche-watch.elysiumfields.ai)
@@ -43,7 +46,7 @@ A multi-domain environmental-prediction platform: independently trained, per-dom
 PyTorch · Lightning · LSTMs · Temporal Fusion Transformers · LightGBM · CatBoost · YOLOv8 · Python · TypeScript · React / React Native · Supabase · Cloudflare · CUDA
 
 ### 🧪 How I work
-Isolated experiments · reproducible configs · calibrated uncertainty (CRPS) · locked sacred test sets · honest benchmark reporting. Self-taught by training models that beat published baselines — every project is the curriculum.
+Isolated experiments · reproducible configs · calibrated uncertainty (CRPS) · locked sacred test sets · pre-registered thresholds · honest benchmark reporting. A result isn't a result until it re-derives from its artifacts and survives a check for what else could explain it — including the checks that kill my own claims. Self-taught by building that discipline the hard way; every project is the curriculum.
 
 ---
 
