@@ -13,7 +13,6 @@ Self-taught engineer with 25+ years of creative-technical work behind me. After 
 | | |
 |---|---|
 | **[sure-jan](https://github.com/Wisemanposh/sure-jan)** | An adversarial auditor for machine-generated research. Ten roles hand work through a phase state machine, every handoff is a schema-validated contract, every transition lands in a hash-chained audit trail, and training cannot start without a single-use clearance token bound to a pre-registered threshold. Built because models round toward success when reporting on their own work. |
-| **[irenicon](https://github.com/Wisemanposh/irenicon)** | A local-first production studio for a careful comparative-religion podcast. Evidence library with item-level rights, version-bound human approval that any material edit invalidates, alternating voice rendering, mastering and audio QA. Its locked retrieval evaluation records the case it currently fails rather than hiding it. |
 | **[pocket](https://github.com/Wisemanposh/pocket)** | A chord-and-melody pocket instrument. Web Audio engine with an AudioWorklet, an always-on tape track, WAV export, running as both a web app and a Tauri desktop build. |
 
 ---
