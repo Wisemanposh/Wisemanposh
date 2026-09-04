@@ -1,8 +1,10 @@
 # Hi, I'm Trent 👋
 
-### Applied AI Engineer
+### Applied AI Systems Engineer
 
-Self-taught engineer with 25+ years of creative-technical work behind me. After a career mixing location sound on film, television and national commercial campaigns, I taught myself software and machine learning, and now build and ship systems **end-to-end, solo**: pipeline, model, evaluation, deployed product.
+**Agentic Workflows · Evaluation · Production Reliability**
+
+AI systems builder with a prior career in location sound for film, television and national commercial campaigns. I taught myself software and machine learning, and now build and ship systems **end-to-end, solo**: pipeline, model, evaluation, deployed product.
 
 📍 Cranbrook, BC, Canada · Open to remote · 📫 **trent@elysiumfields.ai**
 
@@ -19,7 +21,7 @@ Self-taught engineer with 25+ years of creative-technical work behind me. After 
 
 ### 🔭 What I'm building now
 
-**Multi-agent systems.** Orchestration written from scratch on the Anthropic API. Panels of specialised agents that debate, critique and adjudicate rather than answer once. My largest runs ~9,400 lines behind **636 passing tests**, with adversarial verification and structured termination rather than a fixed round count.
+**Multi-agent systems.** Orchestration written from scratch on the Anthropic API. Panels of specialised agents that debate, critique and adjudicate rather than answer once. My largest uses an extensive automated test suite, adversarial verification and structured termination rather than a fixed round count.
 
 **LLM infrastructure and agent tooling.** Persistent cross-session memory over a hosted database, an MCP server exposing it to any client, generated per-project agent configuration, and the guardrails around all of it: pre-flight hooks that block unsafe operations before they run.
 
